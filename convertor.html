@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+<body>
+
+	
+	имеющий <input type="text" id="imeyushiy"> <br>
+	черный рынок <input type="text" id="cherniyrinok"> <br>
+	цб <input type="text" id="bank"> <br>
+	<input type="button" id="send" value="rttrtrt" onclick="convertor()">
+	
+	
+		<script>
+		
+		function convertor(){
+			realMoney = document.getElementById('imeyushiy').value;
+			chrCurrency = document.getElementById('cherniyrinok').value;
+			cbCurrency = document.getElementById('bank').value;
+			var a = Math.round(realMoney/chrCurrency);
+			var b = Math.round(realMoney/cbCurrency);
+			c = 'sizni '+realMoney+' so`m pulingiz $'+a+' bozor kursida, $'+b+' davlat kursida';
+			if(cbCurrency>2900) {
+				alert('kurs 2900 dan kottamas');
+			} if(chrCurrency>10000) {
+				alert('bozor kurs 10k dan kottamas');
+			} if(realMoney>1000000) {
+				alert('asasdasd');
+			} else {
+				alert( c );
+			} 
+			
+
+			
+		}
+		
+		//	alert convertor(150000, 6200, 2850);
+	</script>
+</body>
+</html>
