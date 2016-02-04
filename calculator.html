@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html>
+<head>
+	<style>
+	.chislo {
+		text-align: center ;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#exp {
+		width: 50px;
+	}
+	
+	#chislo1 {
+		width: 100px;
+	}
+	
+	#chislo2 {
+		width: 100px;
+	}
+	
+	.but {
+		margin-top: 30px;
+		text-align: center;
+
+	}
+	
+	#send {
+		width:400px;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	
+	#Fieldset {
+		width: 700px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	</style>
+</head>
+<body>
+
+	
+	<Fieldset id="Fieldset">
+	
+		<div class='chislo'>
+		
+			<table align="center">
+				<tr>
+					<td>1-е число</td> 
+					<td>exp</td> 
+					<td>2-е число</td> 
+				</tr>
+				<br>
+				<tr>
+					<td><input type="text" id="chislo1"> </td>
+					<td><select id="exp"><option>+</option><option>-</option><option>*</option><option>/</option> </select></td>
+					<td><input type="text" id="chislo2"></td> 
+				</tr>
+			</table>
+			
+			<div id="rslt">  </div>
+		</div>
+		
+		<div class='but'>
+			<input type="button" id="send" value="click here" onclick="calculator()" >
+		</div>
+	
+	</Fieldset>
+	
+	
+	<script>
+	
+				
+		function calculator(a,b,expression) {
+		
+		a = Number(document.getElementById('chislo1').value);
+		b = Number(document.getElementById('chislo2').value);
+
+
+		var result;
+
+		expression = document.getElementById('exp').value;
+			switch (expression) {
+			   case '+':
+				  result = a+b;
+				  break
+			   case '-':
+				  result = a-b;
+				  break
+			   case '*':
+				  result = a*b;
+				  break
+				case '/':
+				  result = a/b;
+				  break
+			   default:
+				  statements_def
+				  break
+			}
+		
+			document.getElementById("rslt").innerHTML = result;
+			
+			return result;
+				
+		}
+		
+		
+		
+	 
+	
+		
+
+	</script>
+	
+</body>
+</html>
